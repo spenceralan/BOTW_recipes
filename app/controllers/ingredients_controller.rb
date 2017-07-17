@@ -11,24 +11,29 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    @ingredient = Ingredient.create(ingredient_params)
-    json_response(@ingredient)
+    @ingredient = Ingredient.create!(ingredient_params)
+    json_response(@ingredient, :created)
   end
 
   def update
     @ingredient = Ingredient.find(params[:id])
-    @ingredient.update(ingredient_params)
+    if @ingredient.update!(ingredient_params)
+      render status: 200, json: {
+        message: "#{@ingredient.name} has successfully been updated."
+      }
+    end
   end
 
   def destroy
     @ingredient = Ingredient.find(params[:id])
-    @ingredient.destroy
+    if @ingredient.destroy
+      render status: 200, json: {
+        message: "#{@ingredient.name} has successfully been destroyed."
+      }
+    end
   end
 
   private
-  def json_response(object)
-    render json: object, status: :ok
-  end
 
   def ingredient_params
     params.permit(:name, :base_hearts_recovered)
