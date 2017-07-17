@@ -1,9 +1,11 @@
 class IngredientsController < ApplicationController
+  include Sequelize
 
   def index
-    name = params[:name]
-    @ingredients = Ingredient.where("lower(name) like ?", "%#{name.downcase}%")
-    # binding.pry
+    ingredient_params.each_pair do |k, v|
+      query = build_query(k, v)
+      @ingredients = Ingredient.where("#{query[0]}", "#{query[1]}")
+    end
     json_response(@ingredients)
   end
 
