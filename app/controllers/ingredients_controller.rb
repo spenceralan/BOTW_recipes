@@ -1,7 +1,9 @@
 class IngredientsController < ApplicationController
 
   def index
-    @ingredients = Ingredient.all
+    name = params[:name]
+    @ingredients = Ingredient.where("lower(name) like ?", "%#{name.downcase}%")
+    # binding.pry
     json_response(@ingredients)
   end
 
