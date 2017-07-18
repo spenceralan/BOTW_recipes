@@ -8,77 +8,73 @@
 
 Ingredient.destroy_all
 
-Ingredient.create(
-  [
-    { name: "Big Hearty Radish", base_hearts_recovered:	4},
-    { name: "Hearty Salmon", base_hearts_recovered:	4},
-    { name: "Hearty Durian", base_hearts_recovered:	3},
-    { name: "Big Hearty Truffle", base_hearts_recovered:	3},
-    { name: "Hearty Blueshell Snail", base_hearts_recovered:	3},
-    { name: "Hearty Radish", base_hearts_recovered:	2.5},
-    { name: "Hearty Truffle", base_hearts_recovered:	2},
-    { name: "Hearty Bass", base_hearts_recovered:	2},
-    { name: "Hearty Lizard", base_hearts_recovered:	0},
-    { name: "Fairy", base_hearts_recovered:	5},
-    { name: "Raw Gourmet Meat", base_hearts_recovered:	3},
-    { name: "Raw Whole Bird", base_hearts_recovered:	3},
-    { name: "Raw Prime Meat", base_hearts_recovered:	1.5},
-    { name: "Raw Bird Thigh", base_hearts_recovered:	1.5},
-    { name: "Palm Fruit", base_hearts_recovered:	1},
-    { name: "Hyrule Herb", base_hearts_recovered:	1},
-    { name: "Raw Meat", base_hearts_recovered:	1},
-    { name: "Raw Bird Drumstick", base_hearts_recovered:	1},
-    { name: "Hylian Rice", base_hearts_recovered:	1},
-    { name: "Bird Egg", base_hearts_recovered:	1},
-    { name: "Tabantha Wheat", base_hearts_recovered:	1},
-    { name: "Hyrule Bass", base_hearts_recovered:	1},
-    { name: "Sanke Carp", base_hearts_recovered:	1},
-    { name: "Fresh Milk", base_hearts_recovered:	0.5},
-    { name: "Apple", base_hearts_recovered:	0.5},
-    { name: "Wildberry", base_hearts_recovered:	0.5},
-    { name: "Hylian Shroom", base_hearts_recovered:	0.5},
-    { name: "Acorn", base_hearts_recovered:	0.25},
-    { name: "Chickaloo Tree Nut", base_hearts_recovered:	0.25},
-    { name: "Tireless Frog", base_hearts_recovered:	4},
-    { name: "Endura Carrot", base_hearts_recovered:	2},
-    { name: "Endura Shroom", base_hearts_recovered:	1},
-    { name: "Smotherwing Butterfly", base_hearts_recovered:	0},
-    { name: "Fireproof Lizard", base_hearts_recovered:	0},
-    { name: "Chillfin Trout", base_hearts_recovered:	1},
-    { name: "Chillshroom", base_hearts_recovered:	0.5},
-    { name: "Hydromelon", base_hearts_recovered:	0.5},
-    { name: "Cool Safflina", base_hearts_recovered:	0},
-    { name: "Winterwing Butterfly", base_hearts_recovered:	0},
-    { name: "Cold Darner", base_hearts_recovered:	0},
-    { name: "Sizzlefin Trout", base_hearts_recovered:	1},
-    { name: "Spicy Pepper", base_hearts_recovered:	0.5},
-    { name: "Sunshroom", base_hearts_recovered:	0.5},
-    { name: "Summerwing Butterfly", base_hearts_recovered:	0},
-    { name: "Warm Darner", base_hearts_recovered:	0},
-    { name: "Voltfin Trout", base_hearts_recovered:	1},
-    { name: "Zapshroom", base_hearts_recovered:	0.5},
-    { name: "Voltfruit", base_hearts_recovered:	0.5},
-    { name: "Electric Safflina", base_hearts_recovered:	0},
-    { name: "Thunderwing Butterfly", base_hearts_recovered:	0},
-    { name: "Electric Darner", base_hearts_recovered:	0},
-    { name: "Fleet-Lotus Seeds", base_hearts_recovered:	0.5},
-    { name: "Rushroom", base_hearts_recovered:	0.5},
-    { name: "Swift Carrot", base_hearts_recovered:	0.5},
-    { name: "Hot-Footed Frog", base_hearts_recovered:	0},
-    { name: "Hightail Lizard", base_hearts_recovered:	0},
-    { name: "Silent Princess", base_hearts_recovered:	2},
-    { name: "Stealthfin Trout", base_hearts_recovered:	1},
-    { name: "Sneaky River Snail", base_hearts_recovered:	1},
-    { name: "Silent Shroom", base_hearts_recovered:	0.5},
-    { name: "Swift Violet", base_hearts_recovered:	0},
-    { name: "Blue Nightshade", base_hearts_recovered:	0},
-    { name: "Sunset Firefly", base_hearts_recovered:	0},
-    { name: "Mighty Carp", base_hearts_recovered:	1},
-    { name: "Mighty Porgy", base_hearts_recovered:	1},
-    { name: "Razorclaw Crab", base_hearts_recovered:	1},
-    { name: "Mighty Bananas", base_hearts_recovered:	0.5},
-    { name: "Razorshroom", base_hearts_recovered:	0.5},
-    { name: "Bladed Rhino Beetle", base_hearts_recovered:	0},
-    { name: "Mighty Thistle", base_hearts_recovered:	0}
-  ]
-)
+big_hearty_radish = Ingredient.create(name: "Big Hearty Radish", base_hearts_recovered:	4)
+hearty_salmon = Ingredient.create(name: "Hearty Salmon", base_hearts_recovered:	4)
+hearty_durian = Ingredient.create(name: "Hearty Durian", base_hearts_recovered:	3)
+big_hearty_truffle = Ingredient.create(name: "Big Hearty Truffle", base_hearts_recovered:	3)
+hearty_blueshell_snail = Ingredient.create(name: "Hearty Blueshell Snail", base_hearts_recovered:	3)
+hearty_radish = Ingredient.create(name: "Hearty Radish", base_hearts_recovered:	2.5)
+hearty_truffle = Ingredient.create(name: "Hearty Truffle", base_hearts_recovered:	2)
+hearty_bass = Ingredient.create(name: "Hearty Bass", base_hearts_recovered:	2)
+hearty_lizard = Ingredient.create(name: "Hearty Lizard", base_hearts_recovered:	0)
+fairy = Ingredient.create(name: "Fairy", base_hearts_recovered:	5)
+raw_gourmet_meat = Ingredient.create(name: "Raw Gourmet Meat", base_hearts_recovered:	3)
+raw_whole_bird = Ingredient.create(name: "Raw Whole Bird", base_hearts_recovered:	3)
+raw_prime_meat = Ingredient.create(name: "Raw Prime Meat", base_hearts_recovered:	1.5)
+raw_bird_thigh = Ingredient.create(name: "Raw Bird Thigh", base_hearts_recovered:	1.5)
+palm_fruit = Ingredient.create(name: "Palm Fruit", base_hearts_recovered:	1)
+hyrule_herb = Ingredient.create(name: "Hyrule Herb", base_hearts_recovered:	1)
+raw_meat = Ingredient.create(name: "Raw Meat", base_hearts_recovered:	1)
+raw_bird_drumstick = Ingredient.create(name: "Raw Bird Drumstick", base_hearts_recovered:	1)
+hylian_rice = Ingredient.create(name: "Hylian Rice", base_hearts_recovered:	1)
+bird_egg = Ingredient.create(name: "Bird Egg", base_hearts_recovered:	1)
+tabantha_wheat = Ingredient.create(name: "Tabantha Wheat", base_hearts_recovered:	1)
+hyrule_bass = Ingredient.create(name: "Hyrule Bass", base_hearts_recovered:	1)
+sanke_carp = Ingredient.create(name: "Sanke Carp", base_hearts_recovered:	1)
+fresh_milk = Ingredient.create(name: "Fresh Milk", base_hearts_recovered:	0.5)
+apple = Ingredient.create(name: "Apple", base_hearts_recovered:	0.5)
+wildberry = Ingredient.create(name: "Wildberry", base_hearts_recovered:	0.5)
+hylian_shroom = Ingredient.create(name: "Hylian Shroom", base_hearts_recovered:	0.5)
+acorn = Ingredient.create(name: "Acorn", base_hearts_recovered:	0.25)
+chickaloo_tree_nut = Ingredient.create(name: "Chickaloo Tree Nut", base_hearts_recovered:	0.25)
+tireless_frog = Ingredient.create(name: "Tireless Frog", base_hearts_recovered:	4)
+endura_carrot = Ingredient.create(name: "Endura Carrot", base_hearts_recovered:	2)
+endura_shroom = Ingredient.create(name: "Endura Shroom", base_hearts_recovered:	1)
+smotherwing_butterfly = Ingredient.create(name: "Smotherwing Butterfly", base_hearts_recovered:	0)
+fireproof_lizard = Ingredient.create(name: "Fireproof Lizard", base_hearts_recovered:	0)
+chillfin_trout = Ingredient.create(name: "Chillfin Trout", base_hearts_recovered:	1)
+chillshroom = Ingredient.create(name: "Chillshroom", base_hearts_recovered:	0.5)
+hydromelon = Ingredient.create(name: "Hydromelon", base_hearts_recovered:	0.5)
+cool_safflina = Ingredient.create(name: "Cool Safflina", base_hearts_recovered:	0)
+winterwing_butterfly = Ingredient.create(name: "Winterwing Butterfly", base_hearts_recovered:	0)
+cold_darner = Ingredient.create(name: "Cold Darner", base_hearts_recovered:	0)
+sizzlefin_trout = Ingredient.create(name: "Sizzlefin Trout", base_hearts_recovered:	1)
+spicy_pepper = Ingredient.create(name: "Spicy Pepper", base_hearts_recovered:	0.5)
+sunshroom = Ingredient.create(name: "Sunshroom", base_hearts_recovered:	0.5)
+summerwing_butterfly = Ingredient.create(name: "Summerwing Butterfly", base_hearts_recovered:	0)
+warm_darner = Ingredient.create(name: "Warm Darner", base_hearts_recovered:	0)
+voltfin_trout = Ingredient.create(name: "Voltfin Trout", base_hearts_recovered:	1)
+zapshroom = Ingredient.create(name: "Zapshroom", base_hearts_recovered:	0.5)
+voltfruit = Ingredient.create(name: "Voltfruit", base_hearts_recovered:	0.5)
+electric_safflina = Ingredient.create(name: "Electric Safflina", base_hearts_recovered:	0)
+thunderwing_butterfly = Ingredient.create(name: "Thunderwing Butterfly", base_hearts_recovered:	0)
+electric_darner = Ingredient.create(name: "Electric Darner", base_hearts_recovered:	0)
+fleet_lotus_seeds = Ingredient.create(name: "Fleet-Lotus Seeds", base_hearts_recovered:	0.5)
+rushroom = Ingredient.create(name: "Rushroom", base_hearts_recovered:	0.5)
+swift_carrot = Ingredient.create(name: "Swift Carrot", base_hearts_recovered:	0.5)
+hot_footed_frog = Ingredient.create(name: "Hot-Footed Frog", base_hearts_recovered:	0)
+hightail_lizard = Ingredient.create(name: "Hightail Lizard", base_hearts_recovered:	0)
+silent_princess = Ingredient.create(name: "Silent Princess", base_hearts_recovered:	2)
+stealthfin_trout = Ingredient.create(name: "Stealthfin Trout", base_hearts_recovered:	1)
+sneaky_river_snail = Ingredient.create(name: "Sneaky River Snail", base_hearts_recovered:	1)
+silent_shroom = Ingredient.create(name: "Silent Shroom", base_hearts_recovered:	0.5)
+swift_violet = Ingredient.create(name: "Swift Violet", base_hearts_recovered:	0)
+blue_nightshade = Ingredient.create(name: "Blue Nightshade", base_hearts_recovered:	0)
+sunset_firefly = Ingredient.create(name: "Sunset Firefly", base_hearts_recovered:	0)
+mighty_carp = Ingredient.create(name: "Mighty Carp", base_hearts_recovered:	1)
+mighty_porgy = Ingredient.create(name: "Mighty Porgy", base_hearts_recovered:	1)
+razorclaw_crab = Ingredient.create(name: "Razorclaw Crab", base_hearts_recovered:	1)
+mighty_bananas = Ingredient.create(name: "Mighty Bananas", base_hearts_recovered:	0.5)
+razorshroom = Ingredient.create(name: "Razorshroom", base_hearts_recovered:	0.5)
+bladed_rhino_beetle = Ingredient.create(name: "Bladed Rhino Beetle", base_hearts_recovered:	0)
+mighty_thistle = Ingredient.create(name: "Mighty Thistle", base_hearts_recovered:	0)
