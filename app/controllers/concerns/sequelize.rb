@@ -1,6 +1,8 @@
 module Sequelize
   def build_query(key, value)
     case key
+    when "token"
+      return
     when "base_hearts_recovered"
       query = "lower(text(#{key})) like ?", "#{value.to_f}"
     else

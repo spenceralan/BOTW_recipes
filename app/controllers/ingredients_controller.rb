@@ -1,7 +1,7 @@
 class IngredientsController < ApplicationController
-  include Sequelize
-  include ActionController::HttpAuthentication::Token::ControllerMethods
   before_action :authenticate
+  include Sequelize
+
 
   def index
     ingredient_params.each_pair do |k, v|
@@ -43,12 +43,6 @@ class IngredientsController < ApplicationController
 
   def ingredient_params
     params.permit(:name, :base_hearts_recovered)
-  end
-
-  def authenticate
-    authenticate_or_request_with_http_token do |token, options|
-      User.find_by(token: token)
-    end
   end
 
 end

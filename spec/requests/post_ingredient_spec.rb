@@ -2,8 +2,10 @@ require 'rails_helper'
 
 describe "get all ingredients route", type: :request do
 
+  let!(:user) {FactoryGirl.create(:user)}
+
   before do
-    post '/ingredients', params: { name: 'Berry Berries', base_hearts_recovered: 0 }
+    post '/ingredients', params: { token: user.token, name: 'Berry Berries', base_hearts_recovered: 0 }
   end
 
   it 'returns the ingredient name' do
