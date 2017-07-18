@@ -1,5 +1,5 @@
 class Rack::Attack
-  LIMIT = 20
+  LIMIT = 5
   Rack::Attack.throttle('req/ip', :limit => LIMIT, :period => 1.second) do |req|
     # If the return value is truthy, the cache key for the return value
     # is incremented and compared with the limit. In this case:
@@ -9,5 +9,8 @@ class Rack::Attack
     throttle = false if Rails.env.test? && !ENV["THROTTLE_DURING_TEST"]
     req.ip
   end
+
+
+
 
 end

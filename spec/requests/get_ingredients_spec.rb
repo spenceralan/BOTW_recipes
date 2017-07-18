@@ -3,18 +3,6 @@ require 'rails_helper'
 describe "get all ingredients route", :type => :request do
   let!(:user) { FactoryGirl.create(:user) }
 
-  before(:all) do
-    ENV["THROTTLE_DURING_TEST"] = "true"
-  end
-
-  after(:all) do
-    ENV.delete("THROTTLE_DURING_TEST")
-  end
-
-  after do
-    Rails.cache.clear
-  end
-
   it 'returns status code 200 when searching by name' do
     get '/ingredients', params: { token: user.token, name: "Big" }
     expect(response).to have_http_status(:success)
