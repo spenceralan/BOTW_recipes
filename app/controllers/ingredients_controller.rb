@@ -4,10 +4,7 @@ class IngredientsController < ApplicationController
 
 
   def index
-    ingredient_params.each_pair do |k, v|
-      query = build_query(k, v)
-      @ingredients = Ingredient.where("#{query[0]}", "#{query[1]}")
-    end
+    @ingredients = Ingredient.where("lower(text(base_hearts_recovered)) like ?", ingredient_params.fetch("base_hearts_recovered", "%" )).where("lower(text(name)) like ?", "%#{ingredient_params.fetch('name', '%' )}%")
     json_response(@ingredients)
   end
 
@@ -42,7 +39,7 @@ class IngredientsController < ApplicationController
   private
 
   def ingredient_params
-    params.permit(:name, :base_hearts_recovered)
+    params.permit(:name, :base_hearts_recovered, :token)
   end
 
 end
