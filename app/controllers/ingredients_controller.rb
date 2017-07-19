@@ -1,10 +1,11 @@
 class IngredientsController < ApplicationController
   before_action :authenticate
-  include Sequelize
-
 
   def index
-    @ingredients = Ingredient.where("lower(text(base_hearts_recovered)) like ?", ingredient_params.fetch("base_hearts_recovered", "%" )).where("lower(text(name)) like ?", "%#{ingredient_params.fetch('name', '%' )}%")
+    hearts = ingredient_params.fetch("base_hearts_recovered", "%" )
+    hearts = hearts.to_f unless hearts == "%"
+    name = ingredient_params.fetch('name', '%' )
+    @ingredients = Ingredient.where("lower(text(base_hearts_recovered)) like ?", hearts).where("lower(text(name)) like ?", "%#{name}%")
     json_response(@ingredients)
   end
 
